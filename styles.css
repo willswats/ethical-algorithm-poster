@@ -74,8 +74,8 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .poster-body {
-  margin: 2rem;
-  padding: 2rem;
+  margin: 1rem;
+  padding: 1rem;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
 }
@@ -84,35 +84,42 @@ input[type="range"]::-moz-range-thumb {
   display: flex;
 }
 
-.poster-body__column {
-  display: flex;
+.poster-body__box {
+  width: 50%;
   padding: 1rem;
   margin: 0.5rem;
-  width: 50%;
   border-radius: 1rem;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.poster-body__column-text {
+.poster-body__box-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.poster-body__box-body {
   display: flex;
-  flex-direction: column;
+}
+
+.poster-body__box-body-text {
   margin: 0.5rem;
 }
 
-.poster-body__column img {
+.poster-body__box-body img {
   width: 20rem;
   height: 20rem;
   border-radius: 2rem;
   box-shadow: 0rem 0.2rem 0.2rem black;
 }
 
-.poster-body__column-body {
+.poster-body__box-body-below-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.poster-body__column-title {
-  display: flex;
-  font-size: 1.5rem;
-  font-weight: bold;
+.poster-body__box-body-below-text img {
+  width: 10rem;
+  height: 4rem;
 }

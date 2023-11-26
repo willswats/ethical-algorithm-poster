@@ -73,17 +73,46 @@ input[type="range"]::-moz-range-thumb {
   background-color: #fff;
 }
 
-.img-row {
+.poster-body {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.poster-body__row {
   display: flex;
 }
 
-.img-container {
+.poster-body__column {
   display: flex;
   padding: 1rem;
+  margin: 0.5rem;
+  width: 50%;
+  border-radius: 1rem;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.img-container img {
+.poster-body__column-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+.poster-body__column img {
   width: 20rem;
   height: 20rem;
+  border-radius: 2rem;
+  box-shadow: 0rem 0.2rem 0.2rem black;
+}
+
+.poster-body__column-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.poster-body__column-title {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
 }

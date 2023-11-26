@@ -9,38 +9,95 @@
 
   <body>
     <h2>Flow Charts</h2>
-    <img
-      src="./assets/FlowChartDistance.png"
-      alt="Flow chart displaying how the edge distance is calculated"
-    />
-    <img
-      src="./assets/FlowChartRisk.png"
-      alt="Flow chart displaying how the edge risk is calculated."
-    />
-    <img
-      src="./assets/FlowChartCombinedDistanceRisk.png"
-      alt="Flow chart displaying the how the combined distance risk of the edge is calculated."
-    />
-    <img
-      src="./assets/FlowChartDijkstras.png"
-      alt="Flow chart displaying Dijkstra's algorithm."
-    />
-    <h2>Town 1</h2>
-    <img
-      src="./assets/Town1Coordinates.png"
-      alt="A graph of a town with it's nodes marked with their coordinates in pixels."
-    />
-    <img
-      src="./assets/Town1Distances.png"
-      alt="A graph of a town with it's edges marked with the distance between each of the points."
-    />
-    <img
-      src="./assets/Town1Risks.png"
-      alt="A graph of a town with it's edges marked with the risk."
-    />
-    <img
-      src="./assets/Town1CombinedDistancesRisks.png"
-      alt="A graph of a town with it's edges marked with the combined distance risk."
-    />
+    <div class="img-row">
+      <div class="img-container">
+        <h3>Risk</h3>
+        <img
+          src="./assets/FlowChartRisk.png"
+          alt="Flow chart displaying how the edge risk is calculated."
+        />
+      </div>
+      <div class="img-container">
+        <h3>Dijkstra's</h3>
+        <img
+          src="./assets/FlowChartDijkstras.png"
+          alt="Flow chart displaying Dijkstra's algorithm."
+        />
+      </div>
+    </div>
+    <h2>Town 1 and Town 2 Combined Distance Risk</h2>
+    <div class="img-row">
+      <div class="img-container">
+        <img
+          src="./assets/Town1CombinedDistancesRisks.png"
+          alt="A graph of a town with it's edges marked with the combined distance risk."
+        />
+      </div>
+    </div>
+    <h2>Algorithm Applied</h2>
+    <div class="img-row">
+      <div class="img-container">
+        <img
+          src="./assets/Town1Small.png"
+          alt="A graph of a town with it's edges marked with the combined distance risk."
+        />
+      </div>
+      <div>
+        <h3>Step 1</h3>
+        <ol>
+          <li>Add all nodes to unvisited_nodes.</li>
+          <li>Add all distances to distances, set all distances to None.</li>
+        </ol>
+        <p>
+          distances: {1: None}, {2: None}, {3: None}, {4: None}, {5:None},
+          {6:None}, {7: None}, {8: None}
+        </p>
+        <p>unvisited_nodes = [1,2,3,4,5,6,7,8]</p>
+        <h3>Step 2</h3>
+        <ol>
+          <li>Remove node 1 from unvisited nodes.</li>
+          <li>Set distance for node 1 to 0.</li>
+        </ol>
+        <p>
+          distances: {1: 0}, {2: None}, {3: None}, {4: None}, {5:None},
+          {6:None}, {7: None}, {8: None}
+        </p>
+        <p>unvisited_nodes = [2,3,4,5,6,7,8]</p>
+        <h3>Step 3</h3>
+        <ol>
+          <li>Add adjacent nodes distances.</li>
+          <li>Remove node 4 from unvisited nodes (smallest distance).</li>
+        </ol>
+        <p>
+          distances: {1: 0}, {2: 156}, {3: 175}, {4: 125}, {5:None}, {6:None},
+          {7: None}, {8: None}
+        </p>
+        <p>unvisited_nodes = [2,3,5,6,7,8]</p>
+        <h3>Step 4</h3>
+        <ol>
+          <li>Add adjacent nodes distances from node 4 (add up previous).</li>
+          <li>Remove node 5 from unvisited_nodes.</li>
+        </ol>
+        <p>
+          distances: {1: 0}, {2: 156}, {3: 175}, {4: 125}, {5:191}, {6:None},
+          {7: None}, {8: None}
+        </p>
+        <p>unvisited_nodes = [2,3,6,7,8]</p>
+        <h3>Step 5</h3>
+        <ol>
+          <li>Check adjacent nodes from 5 and add to distances.</li>
+          <li>
+            Note that 3 doesn't get updated as it the distance is greater than
+            the current.
+          </li>
+          <li>Remove node 8 from unvisited_nodes.</li>
+        </ol>
+        <p>
+          distances: {1: 0}, {2: 156}, {3: 175}, {4: 125}, {5:191}, {6:None},
+          {7: 360}, {8: 305}
+        </p>
+        <p>unvisited_nodes = [2,3,6,7]</p>
+      </div>
+    </div>
   </body>
 </html>

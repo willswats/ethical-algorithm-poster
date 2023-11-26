@@ -1,3 +1,4 @@
+/* Globals */
 @font-face {
   font-family: "Roboto";
   src: url("/fonts/Roboto/Roboto-Regular.ttf");
@@ -70,4 +71,19 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
   border: none; /* Remove Firefox default browser style */
   background-color: #fff;
+}
+
+.img-row {
+  display: flex;
+}
+
+.img-container {
+  display: flex;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.img-container img {
+  width: 20rem;
+  height: 20rem;
 }

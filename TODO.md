@@ -9,5 +9,4 @@
 
 ## Code
 
-- [ ] Use semantic elements instead of div
 - [ ] Replace images with code as text

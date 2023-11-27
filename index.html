@@ -9,55 +9,64 @@
 </head>
 
 <body>
-  <section class="poster-body">
-    <div class="poster-body__column">
-      <p class="poster-body__column-title">Combined Distance and Risk</p>
-      <img src="./assets/FlowChartRisk.png" alt="Flow chart displaying how the edge risk is calculated." />
-      <p class="poster-body__column-content">
-        The flow chart displays how the risk of each edge was allocated. Once
-        the risk is allocated it can be added on to the distance to find the
-        combined distance risk. The distance was found by plotting the x and y
-        co-ordinates of each of the points in pixels, and then by using the
-        distance formula as show below.
-      </p>
-      <div id="below-text">
-        <img src="./assets/DistanceBetweenTwoPointsFormula.png" alt="Distance between two points formula." />
-      </div>
-    </div>
-    <div class="poster-body__column">
-      <p class="poster-body__column-title">Dijkstra's Algorithm</p>
-      <img src="./assets/FlowChartDijkstras.png" alt="Flow chart displaying Dijkstra's algorithm." />
-      <p class="poster-body__column-content">
-        The flow chart displays Dijkstra's Algorithm. Dijkstra's Algorithm was
-        used to find the shortest route, based upon the allocated combined
-        distance and risk of each edge.
-      </p>
-    </div>
-    <div class="poster-body__column">
-      <p class="poster-body__column-title">Combined Risk on Town 1</p>
-      <img src="./assets/Town1CombinedDistancesRisks.png"
-        alt="A graph of a town with it's edges marked with the combined distance risk." />
-      <p class="poster-body__column-content">
-        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-        cillum sint consectetur cupidatat.
-      </p>
-    </div>
-    <div class="poster-body__column">
-      <p class="poster-body__column-title">Applying the Algorithm</p>
-      <img src="./assets/Town1Small.png"
-        alt="A graph of a small town with it's edges marked with the combined distance risk." />
-      <div class="poster-body__column-content">
-        <div id="code-example">
+  <main>
+    <article>
+      <figure>
+        <h2>Combined Distance and Risk</h2>
+        <img src="./assets/FlowChartRisk.png" alt="Flow chart displaying how the edge risk is calculated." />
+        <figcaption>
+          The flow chart displays how the risk of each edge was allocated.
+          Once the risk is allocated it can be added on to the distance to
+          find the combined distance risk. The distance was found by plotting
+          the x and y co-ordinates of each of the points in pixels, and then
+          by using the distance formula as show below.
+        </figcaption>
+        <figcaption id="below-text">
+          <img src="./assets/DistanceBetweenTwoPointsFormula.png" alt="Distance between two points formula." />
+        </figcaption>
+      </figure>
+    </article>
+
+    <article>
+      <figure>
+        <h2>Dijkstra's Algorithm</h2>
+        <img src="./assets/FlowChartDijkstras.png" alt="Flow chart displaying Dijkstra's algorithm." />
+        <figcaption class="poster-body__column-content">
+          The flow chart displays Dijkstra's Algorithm. Dijkstra's Algorithm
+          was used to find the shortest route, based upon the allocated
+          combined distance and risk of each edge.
+        </figcaption>
+      </figure>
+    </article>
+
+    <article>
+      <figure>
+        <h2>Combined Risk on Town 1</h2>
+        <img src="./assets/Town1CombinedDistancesRisks.png"
+          alt="A graph of a town with it's edges marked with the combined distance risk." />
+        <figcaption class="poster-body__column-content">
+          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          cillum sint consectetur cupidatat.
+        </figcaption>
+      </figure>
+    </article>
+
+    <article>
+      <figure>
+        <h2>Applying the Algorithm</h2>
+        <img src="./assets/Town1Small.png"
+          alt="A graph of a small town with it's edges marked with the combined distance risk." />
+        <figcaption id="code-example">
           <img src="./assets//DijkstrasStep1.png" alt="Python code for an example Dijkstra's Algorithm." />
           <img src="./assets//DijkstrasStep2.png" alt="Python code for an example Dijkstra's Algorithm." />
           <img src="./assets//DijkstrasStep3.png" alt="Python code for an example Dijkstra's Algorithm." />
           <img src="./assets//DijkstrasStep4.png" alt="Python code for an example Dijkstra's Algorithm." />
           <img src="./assets//DijkstrasStep5.png" alt="Python code for an example Dijkstra's Algorithm." />
-        </div>
-      </div>
-    </div>
+        </figcaption>
+      </figure>
+    </article>
     <a href="https://replit.com/@willswats/Ethical-Algorithm">Code</a>
-  </section>
+  </main>
 </body>
 
 </html>

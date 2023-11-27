@@ -58,7 +58,48 @@
         <h2>Applying the Algorithm</h2>
         <img src="./assets/Town1Small.png"
           alt="A graph of a small town with it's edges marked with the combined distance risk." />
-        <figcaption id="code-example"></figcaption>
+        <figcaption id="code-example">
+          <h3>Step 1</h3>
+          <code>
+            <code>
+              distances = [ {1: None}, {2: None}, {3: None}, {4: None}, {5:
+              None}, {6: None}, {7: None}, {8: None} ]
+            </code>
+            <code> unvisited_nodes = [1, 2, 3, 4, 5, 6, 7, 8] </code>
+          </code>
+          <h3>Step 2</h3>
+          <code>
+            <code>
+              distances = [ {1: 0}, {2: None}, {3: None}, {4: None}, {5:
+              None}, {6: None}, {7: None}, {8: None}, ]
+            </code>
+            <code> unvisited_nodes = [2, 3, 4, 5, 6, 7, 8] </code>
+          </code>
+          <h3>Step 3</h3>
+          <code>
+            <code>
+              # Step 3 distances = [ {1: 0}, {2: 156}, {3: 175}, {4: 125}, {5:
+              None}, {6: None}, {7: None}, {8: None} ]
+            </code>
+            <code> unvisited_nodes = [2, 3, 5, 6, 7, 8] </code>
+          </code>
+          <h3>Step 4</h3>
+          <code>
+            <code>
+              distances = [ {1: 0}, {2: 156}, {3: 175}, {4: 125}, {5: 191},
+              {6: None}, {7: None}, {8: None} ]
+            </code>
+            <code> unvisited_nodes = [2, 3, 6, 7, 8] </code>
+          </code>
+          <h3>Step 5</h3>
+          <code>
+            <code>
+              distances = [ {1: 0}, {2: 156}, {3: 175}, {4: 125}, {5: 191},
+              {6: None}, {7: 360}, {8: 305} ]
+            </code>
+            <code> unvisited_nodes = [2, 3, 6, 7] </code>
+          </code>
+        </figcaption>
       </figure>
     </article>
   </main>

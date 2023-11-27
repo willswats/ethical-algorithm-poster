@@ -59,14 +59,6 @@ figcaption {
   margin: 0.5rem;
 }
 
-code {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-code code {
-  display: flex;
-}
-
 #below-text {
   display: flex;
   flex-direction: column;

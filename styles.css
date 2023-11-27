@@ -40,7 +40,9 @@ figure {
   flex-direction: column;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 0.2rem 0.2rem black;
+  margin-bottom: 1rem;
 }
 
 figure h2 {
@@ -72,12 +74,12 @@ figcaption {
 }
 
 #below-text img {
-  width: 10rem;
+  width: 16rem;
   height: 4rem;
 }
 
 #code-example {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 }
 
 #code-example h3 {

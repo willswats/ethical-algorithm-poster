@@ -1,135 +1,103 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="prism.css" rel="stylesheet" />
-    <link href="styles.css" rel="stylesheet" />
-  </head>
 
-  <body>
-    <main>
-      <article>
-        <figure>
-          <h2>Combined Distance and Risk</h2>
-          <img
-            src="./assets/FlowChartRisk.png"
-            alt="Flow chart displaying how the edge risk is calculated."
-          />
-          <figcaption>
-            The flow chart displays how the risk of each edge was allocated.
-            Once the risk is allocated it can be added on to the distance to
-            find the combined distance risk. The distance was found by plotting
-            the x and y co-ordinates of each of the points in pixels, and then
-            by using the distance formula as show below.
-          </figcaption>
-          <figcaption id="below-text">
-            <img
-              src="./assets/DistanceBetweenTwoPointsFormula.png"
-              alt="Distance between two points formula."
-            />
-          </figcaption>
-        </figure>
-      </article>
+<head>
+  <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="prism/prism.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
 
-      <article>
-        <figure>
-          <h2>Dijkstra's Algorithm</h2>
-          <img
-            src="./assets/FlowChartDijkstras.png"
-            alt="Flow chart displaying Dijkstra's algorithm."
-          />
-          <figcaption class="poster-body__column-content">
-            The flow chart displays Dijkstra's Algorithm. Dijkstra's Algorithm
-            was used to find the shortest route, based upon the allocated
-            combined distance and risk of each edge.
-          </figcaption>
-        </figure>
-      </article>
+<body>
+  <main>
+    <article>
+      <figure>
+        <h2>Combined Distance and Risk</h2>
+        <img src="./assets/FlowChartRisk.png" alt="Flow chart displaying how the edge risk is calculated." />
+        <figcaption>
+          The flow chart displays how the risk of each edge was allocated.
+          Once the risk is allocated it can be added on to the distance to
+          find the combined distance risk. The distance was found by plotting
+          the x and y co-ordinates of each of the points in pixels, and then
+          by using the distance formula as show below.
+        </figcaption>
+        <figcaption id="below-text">
+          <img src="./assets/DistanceBetweenTwoPointsFormula.png" alt="Distance between two points formula." />
+        </figcaption>
+      </figure>
+    </article>
 
-      <article>
-        <figure>
-          <h2>Combined Risk on Town 1</h2>
-          <img
-            src="./assets/Town1CombinedDistancesRisks.png"
-            alt="A graph of a town with it's edges marked with the combined distance risk."
-          />
-          <figcaption class="poster-body__column-content">
-            As seen in the figure, town 1 has it's edges marked with the
-            combined distance and risk values. These Risk values prioritise the
-            safe routes, except for when the safe routes are exceedingly longer
-            than a more dangerous route.
-          </figcaption>
-        </figure>
-      </article>
+    <article>
+      <figure>
+        <h2>Dijkstra's Algorithm</h2>
+        <img src="./assets/FlowChartDijkstras.png" alt="Flow chart displaying Dijkstra's algorithm." />
+        <figcaption class="poster-body__column-content">
+          The flow chart displays Dijkstra's Algorithm. Dijkstra's Algorithm
+          was used to find the shortest route, based upon the allocated
+          combined distance and risk of each edge.
+        </figcaption>
+      </figure>
+    </article>
 
-      <article>
-        <figure>
-          <h2>Applying the Algorithm</h2>
-          <img
-            id="town-small-img"
-            src="./assets/Town1Small.png"
-            alt="A graph of a small town with it's edges marked with the combined distance risk."
-          />
-          <figcaption id="code-example">
-            <h3>Step 1</h3>
-            <pre>
+    <article>
+      <figure>
+        <h2>Combined Risk on Town 1</h2>
+        <img src="./assets/Town1CombinedDistancesRisks.png"
+          alt="A graph of a town with it's edges marked with the combined distance risk." />
+        <figcaption class="poster-body__column-content">
+          As seen in the figure, town 1 has it's edges marked with the
+          combined distance and risk values. These Risk values prioritise the
+          safe routes, except for where the safe routes are exceedingly longer
+          than a more dangerous route.
+        </figcaption>
+      </figure>
+    </article>
+
+    <article>
+      <figure>
+        <h2>Applying the Algorithm</h2>
+        <img id="town-small-img" src="./assets/Town1Small.png"
+          alt="A graph of a small town with it's edges marked with the combined distance risk." />
+        <figcaption id="code-example">
+          <pre>
             <code class="language-python">
-              distances = [{1: None}, {2: None},
-              {3: None}, {4: None},
-              {5:None}, {6: None},
-              {7: None}, {8: None} ]
-              unvisited_nodes = [1, 2, 3, 4, 5,
-              6, 7, 8]
+              # 1. Add all to distances and unvisited.
+              distances = [{1:None}, {2:None}, {3:None}, {4:None},
+              {5:None}, {6:None}, {7:None}, {8:None}]
+              unvisited = [1, 2, 3, 4, 5, 6, 7, 8]
+              # 2. Add distance for 1, remove from unvisited.
+              distances = [{1:0}, {2:None}, {3:None}, {4:None},
+              {5:None}, {6:None}, {7:None}, {8:None}]
+              unvisited = [2, 3, 4, 5, 6, 7, 8]
+              # 3. Add distances for 2, 3, 4. Remove 4 from unvisited.
+              distances = [{1:0}, {2:156}, {3:175}, {4:125},
+              {5:None}, {6:None}, {7:None}, {8:None}]
+              unvisited = [2, 3, 5, 6, 7, 8]
+              # 4. Add distance for 5. Remove 5 from unvisited.
+              distances = [{1:0}, {2:156}, {3:175}, {4:125},
+              {5:191}, {6:None}, {7:None}, {8:None}]
+              unvisited = [2, 3, 6, 7, 8]
+              # 5. Add distance for 7 and 8. Remove 8 from unvisited.
+              distances = [{1:0}, {2:156}, {3:175}, {4:125},
+              {5:191},{6:None}, {7:360}, {8:305}]
+              unvisited = [2, 3, 6, 7]
             </code>
           </pre>
-            <h3>Step 2</h3>
-            <pre>
-            <code class="language-python">
-              distances = [{1: 0}, {2: None},
-              {3: None}, {4: None},
-              {5:None}, {6: None},
-              {7: None}, {8: None} ]
-              unvisited_nodes = [2, 3, 4, 5,
-              6, 7, 8]
-            </code>
-          </pre>
-            <h3>Step 3</h3>
-            <pre>
-            <code class="language-python">
-              distances = [{1: 0}, {2: 156},
-              {3: 175}, {4: 125},
-              {5:None}, {6: None},
-              {7: None}, {8: None} ]
-              unvisited_nodes = [2, 3, 5, 6, 7, 8]
-            </code>
-          </pre>
-            <h3>Step 4</h3>
-            <pre>
-            <code class="language-python">
-              distances = [{1: 0}, {2: 156},
-              {3: 175}, {4: 125},
-              {5: 191}, {6: None},
-              {7: None}, {8: None} ]
-              unvisited_nodes = [2, 3, 6, 7, 8]
-            </code>
-          </pre>
-            <h3>Step 5</h3>
-            <pre>
-            <code class="language-python">
-              distances = [{1: 0}, {2: 156},
-              {3: 175}, {4: 125},
-              {5: 191},{6: None},
-              {7: 360}, {8: 305} ]
-              unvisited_nodes = [2, 3, 6, 7]
-            </code>
-          </pre>
-          </figcaption>
-        </figure>
-      </article>
-    </main>
+        </figcaption>
+      </figure>
 
-    <script src="prism.js"></script>
-  </body>
+      <figure>
+        <h2>Ethical Theory</h2>
+        <figcaption>
+          The algorithm follows the ethical theory of Deontology as the
+          combined distance and risk values were created with a set of rules.
+        </figcaption>
+      </figure>
+    </article>
+  </main>
+
+  <script src="prism/prism.js"></script>
+</body>
+
 </html>

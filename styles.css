@@ -59,6 +59,11 @@ figcaption {
   margin: 0.5rem;
 }
 
+#town-small-img {
+  width: 20rem;
+  height: 20rem;
+}
+
 #below-text {
   display: flex;
   flex-direction: column;
@@ -71,9 +76,11 @@ figcaption {
   height: 4rem;
 }
 
-#code-example img {
-  width: 10rem;
-  height: 10rem;
-  margin: 0.2rem;
-  border-radius: 1rem;
+#code-example {
+  font-size: 0.6rem;
+}
+
+#code-example h3 {
+  font-size: 1rem;
+  font-weight: bold;
 }

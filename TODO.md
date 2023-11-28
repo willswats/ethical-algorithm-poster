@@ -5,6 +5,6 @@
 - [ ] Add town 2
 - [ ] Justify Deontology (add reference)
 - [ ] Justify the balance and optimization method for distance vs safety
-- [ ] Write down assumptions? (more buildings = more pedestrians, add all sides to edge as increased chance of pedestrians)
+- [ ] Write down assumptions? (more buildings = more pedestrians, add all sides to edge as increased chance of pedestrians, distance is rounded down on the graphs as it's better to assume it's further away)
 - [ ] Update Dikstra's flow chart to be more accurate
 - [ ] Replace "Apply the Algorithm" with custom made town

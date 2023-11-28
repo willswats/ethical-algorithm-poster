@@ -45,6 +45,10 @@ figure {
   margin-bottom: 1rem;
 }
 
+article figure:last-of-type {
+  margin-bottom: 0;
+}
+
 figure h2 {
   font-size: 1.5rem;
 }
@@ -58,24 +62,24 @@ figure img {
 
 figcaption {
   font-size: 1.2rem;
-  margin: 0.5rem;
+  margin: 0.5rem 0 0.5rem;
 }
 
-#town-small-img {
-  width: 20rem;
-  height: 20rem;
-}
-
-#below-text {
+#distance-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#below-text img {
+#distance-img img {
   width: 16rem;
   height: 4rem;
+}
+
+#town-small-img {
+  width: 18rem;
+  height: 18rem;
 }
 
 #code-example {

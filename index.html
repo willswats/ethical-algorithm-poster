@@ -16,14 +16,16 @@
         <h2>Combined Distance and Risk</h2>
         <img src="./assets/FlowChartRisk.png" alt="Flow chart displaying how the edge risk is calculated." />
         <figcaption>
-          The flow chart displays how the risk of each edge was allocated.
-          Once the risk is allocated it can be added on to the distance to
-          find the combined distance risk. The distance was found by plotting
-          the x and y co-ordinates of each of the points in pixels, and then
-          by using the distance formula as show below.
+          The flow chart displays how the risk of each edge was allocated. The
+          combined distance and risk was found by adding the risk onto the
+          distance.
         </figcaption>
-        <figcaption id="below-text">
-          <img src="./assets/DistanceBetweenTwoPointsFormula.png" alt="Distance between two points formula." />
+        <img id="distance-img" src="./assets/DistanceBetweenTwoPointsFormula.png"
+          alt="Distance between two points formula." />
+        <figcaption>
+          The distance of each edge was found by plotting the x and y
+          co-ordinates of the corresponding nodes (in pixels), and then by
+          using the distance formula.
         </figcaption>
       </figure>
     </article>
@@ -32,10 +34,9 @@
       <figure>
         <h2>Dijkstra's Algorithm</h2>
         <img src="./assets/FlowChartDijkstras.png" alt="Flow chart displaying Dijkstra's algorithm." />
-        <figcaption class="poster-body__column-content">
-          The flow chart displays Dijkstra's Algorithm. Dijkstra's Algorithm
-          was used to find the shortest route, based upon the allocated
-          combined distance and risk of each edge.
+        <figcaption>
+          Dijkstra's Algorithm was used to find the shortest route, based upon
+          the allocated combined distance and risk of each edge.
         </figcaption>
       </figure>
     </article>
@@ -45,20 +46,20 @@
         <h2>Combined Risk on Town 1</h2>
         <img src="./assets/Town1CombinedDistancesRisks.png"
           alt="A graph of a town with it's edges marked with the combined distance risk." />
-        <figcaption class="poster-body__column-content">
-          As seen in the figure, town 1 has it's edges marked with the
-          combined distance and risk values. These Risk values prioritise the
-          safe routes, except for where the safe routes are exceedingly longer
-          than a more dangerous route.
+        <figcaption>
+          Town 1 has it's edges marked with the combined distance and risk
+          values. These values are typically lower on the edges surrounded by
+          green (safe) zones, and higher in more dangerous zones (blue and
+          red).
         </figcaption>
       </figure>
       <figure>
         <h2>Combined Risk on Town 2</h2>
         <img src="./assets/Town2CombinedDistancesRisks.png"
           alt="A graph of a town with it's edges marked with the combined distance risk." />
-        <figcaption class="poster-body__column-content">
-          Town 2 has been makred with the combined distance and risk, proving
-          that it's applicable to any similar graph.
+        <figcaption>
+          Town 2 has been marked with the combined distance and risk values as
+          well, proving that the algorithm could be applied to any other town.
         </figcaption>
       </figure>
     </article>
@@ -99,8 +100,10 @@
       <figure>
         <h2>Ethical Theory</h2>
         <figcaption>
-          The algorithm follows the ethical theory of Deontology as the
-          combined distance and risk values were created with a set of rules.
+          The Algorithm follows Deontology as it follows a set of rules that
+          will typically result in a safe route being chosen over a more
+          dangerous route. The algorithm aims to find a middle ground between
+          safety and getting to a location in a reasonable amount of time.
         </figcaption>
       </figure>
     </article>

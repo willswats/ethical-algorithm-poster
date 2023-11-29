@@ -68,31 +68,29 @@
     <article>
       <figure>
         <h2>Applying the Algorithm</h2>
-        <img id="town-small-img" src="./assets/Town1Small.png"
+        <img id="town-small-img" src="./assets/TownCustom.png"
           alt="A graph of a small town with it's edges marked with the combined distance risk." />
         <figcaption id="code-example">
           <pre>
             <code class="language-python">
-              # 1. Add all to distances and unvisited.
-              distances = [{1:None}, {2:None}, {3:None}, {4:None},
-              {5:None}, {6:None}, {7:None}, {8:None}]
-              unvisited = [1, 2, 3, 4, 5, 6, 7, 8]
-              # 2. Add distance for 1, remove from unvisited.
-              distances = [{1:0}, {2:None}, {3:None}, {4:None},
-              {5:None}, {6:None}, {7:None}, {8:None}]
-              unvisited = [2, 3, 4, 5, 6, 7, 8]
-              # 3. Add distances for 2, 3, 4. Remove 4 from unvisited.
-              distances = [{1:0}, {2:156}, {3:175}, {4:125},
-              {5:None}, {6:None}, {7:None}, {8:None}]
-              unvisited = [2, 3, 5, 6, 7, 8]
-              # 4. Add distance for 5. Remove 5 from unvisited.
-              distances = [{1:0}, {2:156}, {3:175}, {4:125},
-              {5:191}, {6:None}, {7:None}, {8:None}]
-              unvisited = [2, 3, 6, 7, 8]
-              # 5. Add distance for 7 and 8. Remove 8 from unvisited.
-              distances = [{1:0}, {2:156}, {3:175}, {4:125},
-              {5:191},{6:None}, {7:360}, {8:305}]
-              unvisited = [2, 3, 6, 7]
+              # 1. Add all nodes to distances:
+              distances = [{1:None}, {2:None}, {3:None}, {4:None}, {5:None}]
+              # 2. Add all nodes to unvisited:
+              unvisited = [1, 2, 3, 4, 5]
+              # 3. Add node 1 distance to distances:
+              distances = [{1:0}, {2:None}, {3:None}, {4:None}, {5:None}]
+              # 4. Remove node 1 from unvisited:
+              unvisited = [2, 3, 4, 5]
+              # 5. Add distances for nodes 2, 3 and 4:
+              distances = [{1:0}, {2:133}, {3:257}, {4:217}, {5:None}]
+              # 6. Remove node 2 from unvisited:
+              unvisited = [3, 4, 5]
+              # Update distance to node 3 (129+80=209, less than 257):
+              distances = [{1:0}, {2:133}, {3:209}, {4:217}, {5:None}]
+              # 7. Add node 5 distance to distances:
+              distances = [{1:0}, {2:133}, {3:257}, {4:217}, {5:200}]
+              # 8. Remove node 5 from unvisited:
+              unvisited = [3, 4]
             </code>
           </pre>
         </figcaption>
@@ -104,7 +102,7 @@
           The Algorithm follows Deontology as the combined distance and risk
           values are created based upon a set of rules. The algorithm aims to
           find a middle ground between safety and getting to a location in a
-          reasonable amonut of time.
+          reasonable amount of time.
         </figcaption>
       </figure>
     </article>

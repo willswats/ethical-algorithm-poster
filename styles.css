@@ -38,6 +38,8 @@ main {
 figure {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
   border-radius: 1rem;
   background-color: rgba(0, 0, 0, 0.2);
@@ -58,6 +60,10 @@ figure img {
   height: 100%;
   border-radius: 2rem;
   box-shadow: 0rem 0.2rem 0.2rem black;
+}
+
+figure img:first-of-type {
+  margin-top: 0.5rem;
 }
 
 figcaption {
@@ -82,8 +88,8 @@ figcaption:last-of-type {
 }
 
 #town-small-img {
-  width: 18rem;
-  height: 18rem;
+  width: 20rem;
+  height: 20rem;
 }
 
 #code-example {

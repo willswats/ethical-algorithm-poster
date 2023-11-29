@@ -82,14 +82,14 @@
               # 4. Remove node 1 from unvisited:
               unvisited = [2, 3, 4, 5]
               # 5. Add distances for nodes 2, 3 and 4:
-              distances = [{1:0}, {2:133}, {3:257}, {4:217}, {5:None}]
+              distances = [{1:0}, {2:129}, {3:241}, {4:217}, {5:None}]
               # 6. Remove node 2 from unvisited:
               unvisited = [3, 4, 5]
-              # Update distance to node 3 (129+80=209, less than 257):
-              distances = [{1:0}, {2:133}, {3:209}, {4:217}, {5:None}]
-              # 7. Add node 5 distance to distances:
-              distances = [{1:0}, {2:133}, {3:257}, {4:217}, {5:200}]
-              # 8. Remove node 5 from unvisited:
+              # 7. Update distance to node 3 (129+80=209, less than 241):
+              distances = [{1:0}, {2:129}, {3:209}, {4:217}, {5:None}]
+              # 8. Add node 5 distance to distances (129+196):
+              distances = [{1:0}, {2:129}, {3:209}, {4:217}, {5:325}]
+              # 9. Remove node 5 from unvisited:
               unvisited = [3, 4]
             </code>
           </pre>

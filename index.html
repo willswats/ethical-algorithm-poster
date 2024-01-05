@@ -1,77 +1,95 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="prism/prism.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <title></title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="prism/prism.css" rel="stylesheet" />
-  <link href="styles.css" rel="stylesheet" />
-</head>
+  <body>
+    <main>
+      <article>
+        <figure>
+          <h2>Combined Distance and Risk</h2>
+          <img
+            src="./assets/FlowChartRisk.png"
+            alt="Flow chart displaying how the edge risk is calculated."
+          />
+          <figcaption>
+            The flow chart displays how the risk of each edge was allocated. The
+            combined distance and risk was found by adding the risk onto the
+            distance.
+          </figcaption>
+          <img
+            id="distance-img"
+            src="./assets/DistanceBetweenTwoPointsFormula.png"
+            alt="Distance between two points formula."
+          />
+          <a
+            href="https://www.slideserve.com/ady/distance-and-midpoint-formulas-circles"
+            >Source: (ady, 2013)</a
+          >
+          <figcaption>
+            The distance of each edge was found by plotting the x and y
+            co-ordinates of the corresponding nodes (in pixels), and then by
+            using the distance formula.
+          </figcaption>
+        </figure>
+      </article>
 
-<body>
-  <main>
-    <article>
-      <figure>
-        <h2>Combined Distance and Risk</h2>
-        <img src="./assets/FlowChartRisk.png" alt="Flow chart displaying how the edge risk is calculated." />
-        <figcaption>
-          The flow chart displays how the risk of each edge was allocated. The
-          combined distance and risk was found by adding the risk onto the
-          distance.
-        </figcaption>
-        <img id="distance-img" src="./assets/DistanceBetweenTwoPointsFormula.png"
-          alt="Distance between two points formula." />
-        <a href="https://www.slideserve.com/ady/distance-and-midpoint-formulas-circles">Source: (ady, 2013)</a>
-        <figcaption>
-          The distance of each edge was found by plotting the x and y
-          co-ordinates of the corresponding nodes (in pixels), and then by
-          using the distance formula.
-        </figcaption>
-      </figure>
-    </article>
+      <article>
+        <figure>
+          <h2>Dijkstra's Algorithm</h2>
+          <img
+            src="./assets/FlowChartDijkstras.png"
+            alt="Flow chart displaying Dijkstra's algorithm."
+          />
+          <figcaption>
+            Dijkstra's Algorithm was used to find the shortest route, based upon
+            the allocated combined distance and risk of each edge.
+          </figcaption>
+        </figure>
+      </article>
 
-    <article>
-      <figure>
-        <h2>Dijkstra's Algorithm</h2>
-        <img src="./assets/FlowChartDijkstras.png" alt="Flow chart displaying Dijkstra's algorithm." />
-        <figcaption>
-          Dijkstra's Algorithm was used to find the shortest route, based upon
-          the allocated combined distance and risk of each edge.
-        </figcaption>
-      </figure>
-    </article>
+      <article>
+        <figure>
+          <h2>Combined Risk on Town 1</h2>
+          <img
+            src="./assets/Town1CombinedDistancesRisks.png"
+            alt="A graph of a town with it's edges marked with the combined distance risk."
+          />
+          <figcaption>
+            Town 1 has it's edges marked with the combined distance and risk
+            values. These values are lower on the edges surrounded by green
+            (safe) zones, and higher in more dangerous zones (blue and red),
+            unless a green zone is exceedingly longer than a blue or red zone.
+          </figcaption>
+        </figure>
+        <figure>
+          <h2>Combined Risk on Town 2</h2>
+          <img
+            src="./assets/Town2CombinedDistancesRisks.png"
+            alt="A graph of a town with it's edges marked with the combined distance risk."
+          />
+          <figcaption>
+            Town 2 has been marked with the combined distance and risk values as
+            well, proving that the algorithm could be applied to any other town.
+          </figcaption>
+        </figure>
+      </article>
 
-    <article>
-      <figure>
-        <h2>Combined Risk on Town 1</h2>
-        <img src="./assets/Town1CombinedDistancesRisks.png"
-          alt="A graph of a town with it's edges marked with the combined distance risk." />
-        <figcaption>
-          Town 1 has it's edges marked with the combined distance and risk
-          values. These values are lower on the edges surrounded by green
-          (safe) zones, and higher in more dangerous zones (blue and red),
-          unless a green zone is exceedingly longer than a blue or red zone.
-        </figcaption>
-      </figure>
-      <figure>
-        <h2>Combined Risk on Town 2</h2>
-        <img src="./assets/Town2CombinedDistancesRisks.png"
-          alt="A graph of a town with it's edges marked with the combined distance risk." />
-        <figcaption>
-          Town 2 has been marked with the combined distance and risk values as
-          well, proving that the algorithm could be applied to any other town.
-        </figcaption>
-      </figure>
-    </article>
-
-    <article>
-      <figure>
-        <h2>Applying the Algorithm</h2>
-        <img id="town-small-img" src="./assets/TownCustom.png"
-          alt="A graph of a small town with it's edges marked with the combined distance risk." />
-        <figcaption id="code-example">
-          <pre>
+      <article>
+        <figure>
+          <h2>Applying the Algorithm</h2>
+          <img
+            id="town-small-img"
+            src="./assets/TownCustom.png"
+            alt="A graph of a small town with it's edges marked with the combined distance risk."
+          />
+          <figcaption id="code-example">
+            <pre>
             <code class="language-python">
               # 1. Add all nodes to distances:
               distances = [{1:None}, {2:None}, {3:None}, {4:None}, {5:None}]
@@ -93,22 +111,21 @@
               unvisited = [3, 4]
             </code>
           </pre>
-        </figcaption>
-      </figure>
+          </figcaption>
+        </figure>
 
-      <figure>
-        <h2>Ethical Theory</h2>
-        <figcaption>
-          The Algorithm follows Deontology as the combined distance and risk
-          values were created based upon a set of rules. The algorithm aims to
-          find a middle ground between safety and getting to a location in a
-          reasonable amount of time.
-        </figcaption>
-      </figure>
-    </article>
-  </main>
+        <figure>
+          <h2>Ethical Theory</h2>
+          <figcaption>
+            The Algorithm follows Deontology as the combined distance and risk
+            values were created based upon a set of rules. The algorithm aims to
+            find a middle ground between safety and getting to a location in a
+            reasonable amount of time.
+          </figcaption>
+        </figure>
+      </article>
+    </main>
 
-  <script src="prism/prism.js"></script>
-</body>
-
+    <script src="prism/prism.js"></script>
+  </body>
 </html>

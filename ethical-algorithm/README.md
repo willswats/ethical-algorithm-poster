@@ -1,17 +1,25 @@
 # Ethical Algorithm
 
-## Install `graphics.py` with `venv` (bash/zsh)
+This is an example of how the ethical algorithm (detailed in the poster) could look, however, it is not complete.
+
+## Setup
+
+### Pre-requisites
+
+[Poetry](https://python-poetry.org/) needs to be installed.
+
+### Install
+
+Install the dependencies:
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install graphics.py
+poetry install --no-root
 ```
 
-## Install `graphics.py` with `venv` (fish)
+### Run
+
+Run the program:
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate.fish
-pip install graphics.py
+poetry run python3 ./main.py
 ```

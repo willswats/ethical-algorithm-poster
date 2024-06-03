@@ -1,5 +1,3 @@
-# Try it on replit: https://replit.com/@willswats/Ethical-Algorithm
-
 from math import sqrt
 
 from graphics import Point

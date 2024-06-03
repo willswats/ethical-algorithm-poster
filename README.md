@@ -14,4 +14,4 @@ This repository also holds an [example](./ethical-algorithm/main.py) of how the 
 
 ## Acknowledgements
 
-- [prism](https://prismjs.com/) for the code blocks.
+- [Prism](https://prismjs.com/) for the code blocks.

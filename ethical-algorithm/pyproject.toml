@@ -2,9 +2,10 @@
 name = "ethical-algorithm"
 version = "0.1.0"
 description = "This is an example of how the ethical algorithm (detailed in the poster) could look, however, it is not complete."
-authors = ["willswats <willswats@users.noreply.github.com>"]
+authors = ["willswats <william@williamwatson.dev>"]
 license = "MIT"
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"

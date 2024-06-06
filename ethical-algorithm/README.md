@@ -13,7 +13,7 @@ This is an example of how the ethical algorithm (detailed in the poster) could l
 Install the dependencies:
 
 ```bash
-poetry install --no-root
+poetry install
 ```
 
 ### Run
